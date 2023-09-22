@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
+import Button from "@mui/material/Button"
 import MainScreen from "../../components/MainScreen";
 import "./ProfileScreen.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -125,7 +126,7 @@ const ProfileScreen = ({ location, history }) => {
                   custom
                 />
               </Form.Group>
-              <Button type="submit" varient="primary">
+              <Button type="submit" variant="contained">
                 Update
               </Button>
             </Form>

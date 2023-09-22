@@ -8,6 +8,10 @@ import noteRoutes from "./routes/noteRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
+import {notes} from "./data/notes.js"
+
+// const notes = require("./data/notes")
+
 dotenv.config();
 
 connectDB();
@@ -18,7 +22,14 @@ app.use(express.json()); // to accept json data
 
 app.use("/api/notes", noteRoutes);
 app.use("/api/users", userRoutes);
-
+// app.get("/api/notes",(req,res)=>{
+//   res.json(notes);
+// })
+// app.get("/api/notes/:id",(req,res)=>{
+//   const note = notes.find((n) => n._id === req.params.id)
+//   console.log(req.params);
+//   res.send(note);
+// })
 // --------------------------deployment------------------------------
 const __dirname = path.resolve();
 

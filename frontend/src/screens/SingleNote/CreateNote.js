@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainScreen from "../../components/MainScreen";
-import { Button, Card, Form } from "react-bootstrap";
+import {Card, Form } from "react-bootstrap";
+import Button from "@mui/material/Button"
 import { useDispatch, useSelector } from "react-redux";
 import { createNoteAction } from "../../actions/notesActions";
 import Loading from "../../components/Loading";
@@ -82,10 +83,10 @@ function CreateNote({ history }) {
               />
             </Form.Group>
             {loading && <Loading size={50} />}
-            <Button type="submit" variant="primary">
+            <Button type="submit" variant="contained">
               Create Note
             </Button>
-            <Button className="mx-2" onClick={resetHandler} variant="danger">
+            <Button className="mx-2" onClick={resetHandler} variant="contained" color="error">
               Reset Feilds
             </Button>
           </Form>

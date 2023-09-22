@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Accordion, Badge, Button, Card } from "react-bootstrap";
+import { Accordion, Badge, Card } from "react-bootstrap";
+import Button from "@mui/material/Button"
 import MainScreen from "../../components/MainScreen";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
@@ -59,7 +60,7 @@ function MyNotes({ history, search }) {
     <MainScreen title={`Welcome Back ${userInfo && userInfo.name}..`}>
       {console.log(notes)}
       <Link to="/createnote">
-        <Button style={{ marginLeft: 10, marginBottom: 6 }} size="lg">
+        <Button style={{ marginLeft: 10, marginBottom: 6 }} size="large" variant="contained">
           Create new Note
         </Button>
       </Link>
@@ -76,7 +77,7 @@ function MyNotes({ history, search }) {
           )
           .reverse()
           .map((note) => (
-            <Accordion>
+            <Accordion key={note._id}>
               <Card style={{ margin: 10 }} key={note._id}>
                 <Card.Header style={{ display: "flex" }}>
                   <span
@@ -100,9 +101,10 @@ function MyNotes({ history, search }) {
                   </span>
 
                   <div>
-                    <Button href={`/note/${note._id}`}>Edit</Button>
+                    <Button href={`/note/${note._id}`} variant="contained">Edit</Button>
                     <Button
-                      variant="danger"
+                      variant="contained"
+                      color="error"
                       className="mx-2"
                       onClick={() => deleteHandler(note._id)}
                     >

@@ -12,7 +12,7 @@ import {
   userRegisterReducer,
   userUpdateReducer,
 } from "./reducers/userReducers";
-
+// import 了 很多reducers
 const reducer = combineReducers({
   noteList: noteListReducer,
   userLogin: userLoginReducer,

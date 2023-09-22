@@ -40,7 +40,7 @@ const CreateNote = asyncHandler(async (req, res) => {
     const createdNote = await note.save();
 
     res.status(201).json(createdNote);
-  }
+  } 
 });
 
 //@description     Delete single Note

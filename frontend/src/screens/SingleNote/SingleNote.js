@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MainScreen from "../../components/MainScreen";
 import axios from "axios";
-import { Button, Card, Form } from "react-bootstrap";
+import {Card, Form } from "react-bootstrap";
+import Button from "@mui/material/Button"
 import { useDispatch, useSelector } from "react-redux";
 import { deleteNoteAction, updateNoteAction } from "../../actions/notesActions";
 import ErrorMessage from "../../components/ErrorMessage";
@@ -107,12 +108,12 @@ function SingleNote({ match, history }) {
               />
             </Form.Group>
             {loading && <Loading size={50} />}
-            <Button variant="primary" type="submit">
+            <Button variant="contained" type="submit">
               Update Note
             </Button>
             <Button
               className="mx-2"
-              variant="danger"
+              variant="contained"
               onClick={() => deleteHandler(match.params.id)}
             >
               Delete Note

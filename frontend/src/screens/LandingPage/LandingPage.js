@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import Button from "@mui/material/Button"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./LandingStyles.css";
@@ -25,14 +26,15 @@ function LandingPage({ history }) {
             </div>
             <div className="buttonContainer">
               <Link to="/login">
-                <Button size="lg" className="landingbutton">
+                <Button size="large" className="landingbutton" variant="contained">
                   Login
                 </Button>
               </Link>
               <Link to="/register">
                 <Button
-                  variant="outline-primary"
-                  size="lg"
+                  // variant="outline-primary"
+                  variant="contained"
+                  size="large"
                   className="landingbutton"
                 >
                   Signup

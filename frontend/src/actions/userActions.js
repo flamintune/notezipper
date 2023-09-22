@@ -11,7 +11,7 @@ import {
   USER_UPDATE_SUCCESS,
 } from "../constants/userConstants";
 import axios from "axios";
-
+// dispatch 由 thunk 中间件处理了
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
@@ -29,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
     );
 
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
+    console.log("login data",data);
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({

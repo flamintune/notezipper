@@ -56,3 +56,6 @@ You can register a new account or login with an existing one.
 
 MIT © [Piyush Agarwal ](https://github.com/piyush-eon)
 
+
+<!-- iw2zdJfVbm7YQwx -->
+$env:NODE_OPTIONS="--openssl-legacy-provider"

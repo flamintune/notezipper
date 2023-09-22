@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
+import Button from '@mui/material/Button'
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loading";
@@ -128,7 +129,7 @@ function RegisterScreen({ history }) {
             />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="contained" type="submit">
             Register
           </Button>
         </Form>
